@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bomberman · Demo JS</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <header id="hud">
+      <span class="hud-item">❤️ <b id="hud-lives">3</b></span>
+      <span class="hud-item">💰 <b id="hud-score">0</b></span>
+      <span class="hud-item">💣 <b id="hud-bombs">1</b></span>
+      <span class="hud-item">🔥 <b id="hud-range">1</b></span>
+      <span class="hud-item">🗺️ <b id="hud-level">1</b></span>
+      <span class="hud-item">⏱️ <b id="hud-timer">200</b></span>
+      <button id="btn-mute" type="button" aria-label="Silenciar sonido">🔊</button>
+    </header>
+
+    <canvas id="game" width="720" height="624"></canvas>
+
+    <div id="touch-controls">
+      <div class="dpad">
+        <button type="button" data-dir="up" aria-label="Arriba">▲</button>
+        <button type="button" data-dir="left" aria-label="Izquierda">◀</button>
+        <button type="button" data-dir="right" aria-label="Derecha">▶</button>
+        <button type="button" data-dir="down" aria-label="Abajo">▼</button>
+      </div>
+      <button id="touch-bomb" type="button" aria-label="Soltar bomba">💣</button>
+    </div>
+
+    <div id="overlay" class="hidden">
+      <div id="overlay-card">
+        <h1 id="overlay-title"></h1>
+        <p id="overlay-text"></p>
+        <button id="overlay-btn" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/config.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/sprites.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
